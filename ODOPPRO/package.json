@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManasAgrawal26/ODOP-MP.git"
+    "url": "git+https://github.com/ManasAgrawal26/ODOP-MP-main.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ManasAgrawal26/ODOP-MP/issues"
+    "url": "https://github.com/ManasAgrawal26/ODOP-MP-main/issues"
   },
-  "homepage": "https://github.com/ManasAgrawal26/ODOP-MP#readme",
+  "homepage": "https://github.com/ManasAgrawal26/ODOP-MP-main#readme",
   "dependencies": {
     "bootstrap": "^5.3.2",
     "cors": "^2.8.5",
