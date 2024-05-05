@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter,Route,Routes, useNavigate} from "react-router-dom";
+import {BrowserRouter,Route,Routes} from "react-router-dom";
 import { Shop } from './component/layout/Shop.jsx';
 import Product from './component/layout/Product/Product.jsx';
 import { LoginSignup } from './component/layout/LoginSignup/LoginSignup.jsx';
@@ -17,11 +17,7 @@ import Offices from './component/layout/Footer_Pages/Offices.jsx';
 import Contact from './component/layout/Footer_Pages/Contact.jsx';
 
 function App() {
-  const images = [
-    'https://example.com/image1.jpg',
-    'https://example.com/image2.jpg',
-    'https://example.com/image3.jpg'
-  ];
+ 
   return (
     
 
