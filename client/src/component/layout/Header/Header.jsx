@@ -13,18 +13,17 @@ const Navbar = () => {
                 <div className="logo">
                     <Link to='/'> <img src={odoplogo} alt="Odop Logo"></img></Link>
                 </div>
-
+ 
 
 
                 <div className="nav-links">
                     {localStorage.getItem('auth-token')
                         ? <button className='logout-button' onClick={() => { localStorage.removeItem('auth-token'); window.location.replace('/') }}>Logout</button>
-                        : <Link to='/login'><a href="#" className='login-button'>Login</a></Link>}
+                        : <Link to='/login'><button className='logout-button'>Login</button></Link>}
 
 
-                    <a href="#" className='order'>Orders</a>
                     <Link to='/cart'><img src={cart_icon} alt="" /></Link>
-                    <div class="nav-cart-count">{getTotalCartItems()}</div>
+                    <div class="nav-cart-count">{getTotalCartItems()}</div> 
                 </div>
             </nav>
 

@@ -24,13 +24,13 @@ const Footer = () => {
                 <Link to='/contact' style={{textDecoration:'none',color:'#000000'}}><li>Contact</li></Link>
             </ul>
             <div className="footer-social-icon">
-            <a href="https://www.instagram.com/" target="_blank"><div className="footer-icons-container"> <img src={instagram_icon} alt="" />
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><div className="footer-icons-container"> <img src={instagram_icon} alt="" />
                 </div></a>
 
-                <a href="https://in.pinterest.com/" target="_blank"><div className="footer-icons-container"> <img src={pintester_icon} alt="" />
+                <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer"><div className="footer-icons-container"> <img src={pintester_icon} alt="" />
                 </div></a>
 
-                <a href="https://web.whatsapp.com/" target="_blank"><div className="footer-icons-container">
+                <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer"><div className="footer-icons-container">
                     <img src={whatsapp_icon} alt="" />
                 </div></a>
             </div>
