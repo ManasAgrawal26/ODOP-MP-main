@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
-import all_product from '../Assets/all_product'
 const CartItems = () => {
-    const {getTotalCartAmount,all_product, cartItems, removeFromCart ,addToCart} = useContext(ShopContext);
+
+    const {getTotalCartAmount,all_product, cartItems, removeFromCart } = useContext(ShopContext);
     const handleCheckoutClick = () => {
         const totalAmount = getTotalCartAmount();
         alert(`You are proceeding to checkout. Total amount to be paid: ₹${totalAmount}`);
@@ -59,10 +59,10 @@ const CartItems = () => {
                             <h3>₹{getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <a href='https://forms.gle/UxPtYm94hgJtD9GC7' target="_blank">
+                    <a href='https://forms.gle/UxPtYm94hgJtD9GC7' target="_blank"  rel="noopener noreferrer">
                     <button onClick={handleCheckoutClick}>PROCEED TO CHECKOUT</button>
       </a>
-                </div>
+                </div> 
 
             </div>
         </div>
