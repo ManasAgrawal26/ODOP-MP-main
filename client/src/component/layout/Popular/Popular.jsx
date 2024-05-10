@@ -6,7 +6,7 @@ export const Popular = () => {
     const [popularProducts, setPopularProducts] = useState([]);
    
     useEffect(()=>{
-        fetch('https://odop-mp-main-1.onrender.com/popularinhandicraft')
+        fetch('http://localhost:4000/popularinhandicraft')
         .then((response)=>response.json())
         .then((data)=>setPopularProducts(data));
       },[])
