@@ -20,7 +20,7 @@ const LoginSignupseller = () => {
     const login = async () => {
         console.log("Login function executed", formData);
         let responseData;
-        await fetch('http://localhost:4000/loginseller', {
+        await fetch('https://odop-mp-main.onrender.com/loginseller', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
@@ -41,7 +41,7 @@ const LoginSignupseller = () => {
     const signup = async () => {
         console.log("Signup function executed", formData);
         let responseData;
-        await fetch('http://localhost:4000/signupseller', {
+        await fetch('https://odop-mp-main.onrender.com/signupseller', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
