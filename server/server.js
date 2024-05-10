@@ -1,5 +1,6 @@
 //const app = require("./app");
-const port = 4000;
+require("dotenv").config()
+const port = process.env.PORT;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -9,8 +10,10 @@ const path = require("path");
 const cors = require("cors");
 app.use(express.json());
 app.use(cors());
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://manasagrawal326:12345@cluster0.xbyqlm6.mongodb.net/odop")
+require("dotenv").config()
+mongoose.connect(process.env.MONGO_URL)
 
 app.get("/", (req, res) => {
     res.send("Express App is running")
@@ -85,7 +88,7 @@ const fetchSeller = async (req, res, next) => {
     }
     else {
         try {
-            const data = jwt.verify(token, 'secret_ecom');
+            const data = jwt.verify(token, process.env.SECRET_KEY);
             req.seller = data.seller;
             next();
         } catch (error) {
@@ -122,7 +125,7 @@ const fetchUser = async (req, res, next) => {
     }
     else {
         try {
-            const data = jwt.verify(token, 'secret_ecom');
+            const data = jwt.verify(token, process.env.SECRET_KEY);
             req.user = data.user;
             next();
         } catch (error) {
@@ -232,7 +235,7 @@ app.post('/signup', async (req, res) => {
         }
     }
 
-    const token = jwt.sign(data, 'secret_ecom');
+    const token = jwt.sign(data, process.env.SECRET_KEY);
     res.json({ success: true, token });
 })
 
@@ -247,7 +250,7 @@ app.post('/login', async (req, res) => {
                     id: user.id
                 }
             }
-            const token = jwt.sign(data, 'secret_ecom');
+            const token = jwt.sign(data, process.env.SECRET_KEY);
             res.json({ success: true, token });
         }
         else {
@@ -288,7 +291,7 @@ app.post('/signupseller', async (req, res) => {
         }
     }
 
-    const token = jwt.sign(data, 'secret_ecom');
+    const token = jwt.sign(data, process.env.SECRET_KEY);
     res.json({ success: true, token });
 })
 //Creating endpoint for registering Seller
@@ -317,7 +320,7 @@ app.post('/loginseller', async (req, res) => {
                     id: seller.id
                 }
             }
-            const token = jwt.sign(data, 'secret_ecom');
+            const token = jwt.sign(data,process.env.SECRET_KEY);
             res.json({ success: true, token });
         }
         else {
