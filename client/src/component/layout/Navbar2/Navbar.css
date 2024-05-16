@@ -3,6 +3,7 @@
 .nav2 nav{
     height: 70px;
    color: white;
+   max-width: 1261px;
 }
 .nav2 {
   background: linear-gradient(to right, #f98ea0, #f2bfa1 50%); 
@@ -44,4 +45,11 @@
   border-radius: 20px;
   background-color: #FF4141;
   opacity: 100%;
+}
+
+@media(max-width:1280px)
+{
+  .navbar{
+
+  }
 }
