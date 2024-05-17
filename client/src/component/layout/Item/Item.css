@@ -1,6 +1,10 @@
 .item{
-    width: 350px;
+    width: 270px;
     border-radius: 15px;
+}
+.item-img{
+    height: 300px;
+     width: 270px;
 }
 .item p{
     margin: 6px 0px;

@@ -32,7 +32,6 @@ function App() {
         <Route path='/handicrafts' element={<ShopCategory banner ={women_banner} category="handicraft"/>}/>
         <Route path='/carpet' element={<ShopCategory banner ={kid_banner} category="carpet"/>}/>
         <Route path='/agro' element={<ShopCategory category="agro"/>}/>
-        <Route path='/footwear' element={<ShopCategory category="footwear"/>}/>
         <Route path='/product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
         </Route>
